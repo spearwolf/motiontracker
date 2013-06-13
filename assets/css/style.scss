@@ -1,0 +1,59 @@
+
+html {
+  height: 100%;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    
+    background-color: #000;
+
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+div, p {
+    margin: 0 0;
+    padding: 0 0;
+    border: 0;
+}
+
+#mt-debug-info {
+    font-family: 'Papyrus';
+    font-size: 16;
+    /*font-style: bold;*/
+
+    color: #fff;
+}
+
+#signals {
+    position: relative;
+
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  /* Styles for mobile */
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles for tablet */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  /* Don't forget your Retina CSS! */
+
+}
