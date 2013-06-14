@@ -9,12 +9,11 @@ $(function(){
 
     window.transformLogo = transformLogo;
 
-    transformLogo(0, 0);
+    transformLogo(0, 75);
 
     var socket = io.connect();
 
     socket.on('tilt', function(tilt) {
-        //console.log('tilt:', tilt);
         transformLogo(-tilt.LR, -tilt.FB);
     });
 });

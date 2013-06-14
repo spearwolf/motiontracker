@@ -132,5 +132,4 @@ $(document).ready(function(){
     s0 = SignalVisualizer.make($('#signals'), 120, 320, 200);
     s1 = SignalVisualizer.make($('#signals'), 120, 320, 200, '#f0f000');
 
-
 });

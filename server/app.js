@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require('express')
   , routes = require('./routes')
   , client = require('./routes/client')
@@ -30,9 +25,13 @@ if ('development' === app.get('env')) {
     app.use(express.errorHandler());
 }
 
+// === routes =========
+
 app.get('/', routes.index);
 app.get('/client', client.index);
 
+
+// === http server ======
 
 var server = http.createServer(app);
 
@@ -40,14 +39,14 @@ server.listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
 });
 
-var io = require('socket.io').listen(server);
+// === socket.io ======
 
-//var tiltReceivers = [];
+var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(socket) {
 
     socket.on('tilt', function(tilt) {
-        console.log('tiltLR:', tilt.LR, 'tileFB:', tilt.FB);
+        //console.log('tiltLR:', tilt.LR, 'tiltFB:', tilt.FB);
         socket.broadcast.emit('tilt', tilt);
     });
 });
