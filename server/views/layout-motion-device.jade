@@ -1,0 +1,19 @@
+doctype 5
+html
+  head
+    title= title
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+
+    link(rel='stylesheet', href='/stylesheets/style-motion-device.css')
+
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/jquery-2.0.2.min.js')
+    script(src='/javascripts/motiontracker.js')
+    script(src='/javascripts/app-motion-device.js')
+
+  body
+    block content
